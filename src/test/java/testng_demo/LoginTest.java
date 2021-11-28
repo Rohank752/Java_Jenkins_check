@@ -17,7 +17,7 @@ public class LoginTest {
 	public void test1() {
 		
 		String path=System.getProperty("user.dir");
-		System.setProperty("webdriver.chrome.driver",path+"\\chromedriver2.exe");
+		System.setProperty("webdriver.chrome.driver",path+"\\chromedriver.exe");
 		
 		WebDriver driver = new ChromeDriver();
 		
