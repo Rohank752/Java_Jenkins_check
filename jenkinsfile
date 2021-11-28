@@ -1,0 +1,37 @@
+pipeline {
+    agent any
+
+    tools {
+        // Install the Maven version configured as "M3" and add it to the path.
+        maven "M2"
+    }
+
+    stages {
+        stage('Preparation') {
+            steps {
+                // Get some code from a GitHub repository
+                git 'https://github.com/Rohank752/jenkins_demo2.git'
+
+                // Run Maven on a Unix agent.
+               
+
+               
+            }
+
+           
+        }
+         stage('Build') {
+            steps {
+                // Get some code from a GitHub repository
+                	bat "mvn clean test"
+
+                // Run Maven on a Unix agent.
+               
+
+               
+            }
+
+           
+        }
+    }
+}

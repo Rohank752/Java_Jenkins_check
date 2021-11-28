@@ -14,10 +14,10 @@ import org.testng.annotations.Test;
 public class LoginTest {
 	
 	@Test
-	public void test1() {
+	public void test1() throws InterruptedException {
 		
 		String path=System.getProperty("user.dir");
-		System.setProperty("webdriver.chrome.driver",path+"\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","chromedriver.exe");
 		
 		WebDriver driver = new ChromeDriver();
 		
@@ -32,6 +32,8 @@ public class LoginTest {
 		wait.until(ExpectedConditions.visibilityOf(LoginLink));
 		
 		LoginLink.click();
+		
+		Thread.sleep(4000);
 		
 		WebElement UserName = driver.findElement(By.name("user_login"));
 		UserName.sendKeys("abc@xyz.com");
