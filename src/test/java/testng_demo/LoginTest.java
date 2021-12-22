@@ -17,7 +17,7 @@ public class LoginTest {
 	public void test1() throws InterruptedException {
 		
 		String path=System.getProperty("user.dir");
-		System.setProperty("webdriver.chrome.driver","chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","chromedriver2.exe");
 		
 		WebDriver driver = new ChromeDriver();
 		
